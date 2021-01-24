@@ -20,3 +20,15 @@ By right clicking on the League object, you can create Players and specify name,
 date of birth and whether the player is professional, in the properties tab.
 
 
+7. Right click the created project in Project Explorer<br> 
+--> new --> other --> "Example EMF Model Creation Wizards" --> Bowling Model --> next<br>
+Enter a name for the file, ending with .bowling (Something else than the first file!)<br>
+Select Tournament as the class to be the root object of the model instance.
+
+In this model, you can add matchups and games (must be 2 games per matchup for model to be valid!).
+
+8. Right click in the .bowling file with Tournament as the root object --> Load Resource --><br>
+Browse Workspace --> select the model with League as root object --> ok --> ok<br>
+You now have both models in the same resource set, and can create references between<br>
+the different model objects (players and games).
+
