@@ -74,3 +74,6 @@ New Packages
   - Make it happen example model, viewmodel plugin.
 * org.eclipse.emf.ecp.makeithappen.model
   - Make it happen example model.
+  
+* Families2Persons
+  - Contains the files for the ATL tutorial part of the assignment.
