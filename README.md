@@ -32,3 +32,45 @@ Browse Workspace --> select the model with League as root object --> ok --> ok<b
 You now have both models in the same resource set, and can create references between<br>
 the different model objects (players and games).
 
+
+
+
+# DAT355_Second_EMF_Assignment
+
+
+
+To run the "Make it happen" example model UI with RAP, and display it in the web browser:<br>
+(This approach also fixes the "HTTP ERROR 404 ProxyServlet: /rap" error)
+
+1. Open the .target file in "org.eclipse.emf.ecp.makeithappen.application.sample.rap", and set it as "Active Target Plattform"<br>
+(like in the tutorial https://eclipsesource.com/blogs/tutorials/emf-forms-renderer/#rap),<br>
+and wait until the progress bar in the lower right shows that all files has been loaded successfully.<br>
+2. Right click the launcher (the .launch file) --> run as --> run configurations --> bundles --><br>
+Validate Bundles --> Add Required Bundles --> Apply --> Run
+
+This should get rid of the majority of error messages, and the UI should open in the web browser.<br>
+
+
+If the Bowling model editor refuses to work afterwards, it helps to change<br>
+the "Active Target Platform" back to "Running Application" in the settings:
+
+Window --> preferences --> search "target platform" (under plug-in development) --><br>
+change to "Running Platform" if set to something else --> Apply and close.
+
+
+
+New Packages
+-------------
+
+* dat355.eclipse.bowlingmodel.viewmodel
+  - The viewmodel for the Bowling model.
+  
+* org.eclipse.emf.ecp.makeithappen.application.sample.rap
+  - Make it happen example model, RAP plugin
+    * Contains launcher and target files for the RAP application.
+* org.eclipse.emf.ecp.makeithappen.model.edit
+  - Make it happen example model, edit plugin.
+* org.eclipse.emf.ecp.makeithappen.model.viewmodel
+  - Make it happen example model, viewmodel plugin.
+* org.eclipse.emf.ecp.makeithappen.model
+  - Make it happen example model.
