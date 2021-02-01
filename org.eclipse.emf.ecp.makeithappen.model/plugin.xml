@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+
+   <extension
+         name=""
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            genModel="model/task.genmodel"
+            uri="http://eclipse/org/emf/ecp/makeithappen/model/task"
+            class="org.eclipse.emf.ecp.makeithappen.model.task.TaskPackage">
+      </package>
+   </extension>
+
+</plugin>

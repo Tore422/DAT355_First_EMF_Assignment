@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.eclipse.emf.ecp.makeithappen.model.viewmodel
+Bundle-SymbolicName: org.eclipse.emf.ecp.makeithappen.model.viewmodel;singleton:=true
+Bundle-Version: 1.25.0.qualifier
+Bundle-Vendor: Eclipse Modeling Project
+Require-Bundle: org.eclipse.emf.ecp.view.model.provider.xmi;bundle-version="[1.25.0,1.25.1)"

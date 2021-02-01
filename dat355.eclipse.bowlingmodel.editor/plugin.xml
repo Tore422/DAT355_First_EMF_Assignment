@@ -6,22 +6,67 @@
 
 <plugin>
 
-   <extension point="org.eclipse.ui.newWizards">
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="BowlingEditorAdvisorApplication">
       <!-- @generated bowling -->
-      <category
-            id="org.eclipse.emf.ecore.Wizard.category.ID"
-            name="%_UI_Wizard_category"/>
-      <wizard
-            id="bowling.presentation.BowlingModelWizardID"
-            name="%_UI_BowlingModelWizard_label"
-            class="bowling.presentation.BowlingModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/BowlingModelFile.gif">
-         <description>%_UI_BowlingModelWizard_description</description>
-         <selection class="org.eclipse.core.resources.IResource"/>
-      </wizard>
+      <application>
+         <run class="bowling.presentation.BowlingEditorAdvisor$Application"/>
+      </application>
    </extension>
 
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated bowling -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="bowling.presentation.BowlingEditorAdvisor$Perspective"
+            id="bowling.presentation.BowlingEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated bowling -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="bowling.presentation.BowlingEditorAdvisorOpenURICommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated bowling -->
+      <actionSet
+            label="%_UI_BowlingEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="BowlingEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="bowling.presentation.BowlingEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="bowling.presentation.BowlingEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="bowling.presentation.BowlingEditorAdvisorOpenURICommand"
+               class="bowling.presentation.BowlingEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="bowling.presentation.BowlingEditorAdvisorOpenURIAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated bowling -->
+      <actionSet
+            label="%_UI_BowlingModelWizard_ActionSet_label"
+            visible="true"
+            id="bowling.presentation.BowlingActionBarContributorActionSet">
+         <action
+               label="%_UI_BowlingModelWizard_label"
+               class="bowling.presentation.BowlingActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="bowling.presentation.BowlingActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
    <extension point="org.eclipse.ui.editors">
       <!-- @generated bowling -->
       <editor

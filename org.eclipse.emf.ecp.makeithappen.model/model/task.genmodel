@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2011-2014 EclipseSource Muenchen GmbH and others.&#xD;&#xA;&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;EclipseSource Munich - initial API and implementation"
+    modelDirectory="/org.eclipse.emf.ecp.makeithappen.model/src" editDirectory="/org.eclipse.emf.ecp.makeithappen.model.edit/src"
+    editorDirectory="/org.eclipse.emf.ecp.makeithappen.model.editor/src" modelPluginID="org.eclipse.emf.ecp.makeithappen.model"
+    modelName="Task" editPluginClass="org.eclipse.emf.ecp.makeithappen.model.task.provider.TaskEditPlugin"
+    editorPluginClass="org.eclipse.emf.ecp.makeithappen.model.task.presentation.TaskEditorPlugin"
+    nonNLSMarkers="true" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" commentFormatting="true" testSuiteClass="org.eclipse.emf.ecp.makeithappen.model.task.tests.TaskAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    editPluginID="org.eclipse.emf.ecp.makeithappen.model.edit" editorPluginID="org.eclipse.emf.ecp.makeithappen.model.editor"
+    operationReflection="true" importOrganizing="true" cleanup="true">
+  <foreignModel>task.ecore</foreignModel>
+  <genPackages prefix="Task" basePackage="org.eclipse.emf.ecp.makeithappen.model"
+      disposableProviderFactory="true" ecorePackage="task.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="task.ecore#//Gender">
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Gender/Male"/>
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Gender/Female"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="task.ecore#//Nationality">
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Nationality/German"/>
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Nationality/French"/>
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Nationality/UK"/>
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Nationality/US"/>
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Nationality/Spanish"/>
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Nationality/Italian"/>
+      <genEnumLiterals ecoreEnumLiteral="task.ecore#//Nationality/Russian"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="task.ecore#//DateOfBirth"/>
+    <genClasses image="false" ecoreClass="task.ecore#//Task">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//Task/name"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute task.ecore#//Task/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference task.ecore#//Task/assignee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//Task/dueDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference task.ecore#//Task/subTasks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//Task/done"/>
+      <genOperations ecoreOperation="task.ecore#//Task/hasName">
+        <genParameters ecoreParameter="task.ecore#//Task/hasName/chain"/>
+        <genParameters ecoreParameter="task.ecore#//Task/hasName/context"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="task.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/active"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/timeOfRegistration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/heigth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/nationality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/dateOfBirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//User/email"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference task.ecore#//User/tasks"/>
+    </genClasses>
+    <genClasses ecoreClass="task.ecore#//UserGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute task.ecore#//UserGroup/name"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EReference task.ecore#//UserGroup/users"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
